@@ -1,0 +1,83 @@
+.grid-container {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat( 6, minmax(100px, 1fr) );
+    justify-content: space-evenly;
+}
+
+.grid-container > div {
+    text-align: center;
+    margin: 2px;
+}
+
+.grid-container-popular {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat( 3, minmax(100px, 1fr) );
+    justify-content: space-evenly;
+}
+
+.grid-item-1 {
+    padding-bottom: 25px;
+    grid-area: 1 / 1 / 3 / 3;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.vendor-list {
+    overflow:auto;
+}
+
+.vendor-list-view {
+    white-space: nowrap;
+}
+
+.vendor-item {
+    padding-bottom: 25px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.vendor-item-card {
+    width: 110px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.vendor-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.vendor-name {
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.vendor-op {
+    opacity: 0.3;
+}
+
+.modal-games {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.section-bar {
+    margin: 10ps; 
+    display: flex;
+}
+
+.section-heading {
+    flex: 9; 
+    font-weight: 600;
+}
+
+.flex-1 {
+    flex: 1;
+}
