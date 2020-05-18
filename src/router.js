@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 
 import { Store } from "./store";
 
-import Login from "./login";
-import GamesView from "./gamesView";
-
-// const Login = lazy(() => import("./login"));
-// const GamesView = lazy(() => import("./gamesView"));
+const Login = lazy(() => import("./login"));
+const GamesView = lazy(() => import("./gamesView"));
 
 const ValidatedRoute = ({ component: Component, ...rest }) => {
   const { state } = useContext(Store);
@@ -16,11 +13,11 @@ const ValidatedRoute = ({ component: Component, ...rest }) => {
 
 export const Routes = () => (
   <Router>
-    {/* <Suspense fallback={<div>Loading...</div>}> */}
+    <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/games" component={GamesView} />
       </Switch>
-    {/* </Suspense> */}
+    </Suspense>
   </Router>
 );
